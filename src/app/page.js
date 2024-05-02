@@ -24,7 +24,12 @@ export default function Page() {
         <div>
           {Designbox_data.map((item) => {
             return (
-              <DisplayBoxes index={item.id} head={item.head} text={item.text} />
+              <DisplayBoxes
+                key={item.id}
+                index={item.id}
+                head={item.head}
+                text={item.text}
+              />
             );
           })}
         </div>

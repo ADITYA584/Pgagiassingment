@@ -49,8 +49,8 @@ const Design = (props) => {
       >
         <div className="flex gap-8">
           {" "}
-          {ServicesData.map((item) => (
-            <Calousal_card service={item} />
+          {ServicesData.map((item, index) => (
+            <Calousal_card key={index} service={item} />
           ))}
         </div>
       </div>

@@ -1,10 +1,12 @@
 import GlassEffect from "./Glasseffect";
 
-const DisplayBoxes = ({ index, head, text }) => {
-  console.log(head);
+const DisplayBoxes = ({ index, head, text, id }) => {
   return (
     <GlassEffect>
-      <div className=" relative flex flex-col justify-center  w-full   h-[420px]">
+      <div
+        key={id}
+        className=" relative flex flex-col justify-center  w-full   h-[420px]"
+      >
         <span
           className={
             " hidden md:block absolute bg-custom-svg bg-no-repeat w-[400px] bg-center h-full  animate-spin transition " +
