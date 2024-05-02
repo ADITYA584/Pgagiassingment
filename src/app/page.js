@@ -22,16 +22,14 @@ export default function Page() {
       <div className="flex my-[10rem] flex-col sm:p-4 justify-center  ">
         <DesignBox />
         <div>
-          {Designbox_data.map((item) => {
-            return (
-              <DisplayBoxes
-                key={item.id}
-                index={item.id}
-                head={item.head}
-                text={item.text}
-              />
-            );
-          })}
+          {Designbox_data.map((item) => (
+            <DisplayBoxes
+              key={item.id}
+              index={item.id}
+              head={item.head}
+              text={item.text}
+            />
+          ))}
         </div>
       </div>
       <Book />

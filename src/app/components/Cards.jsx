@@ -43,7 +43,7 @@ const Services = () => {
         <div className="container mx-auto">
           <div className="mb-auto text-center max-w-[400px] mx-auto    ">
             <h1 className="text-2xl lg:text-4xl mb-5 font-bold text-primary_text whitespace-nowrap md:text-center flex justify-center items-center">
-              What's Trending
+              {"What's Trending"}
             </h1>
 
             <p className="text-sm text-black mb-5 dark:text-gray-400 hidden md:block">
@@ -53,11 +53,10 @@ const Services = () => {
 
           <div className="relative mt-2 border-2 border-white  overflow-hidden">
             <div className="absolute -inset-5 rounded-full bg-blue-500/20 blur-xl"></div>
-            <div className="  grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4  ">
+            <div className="  grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {ServicesData.map((service) => (
-                <div>
+                <div key={service.id}>
                   <button
-                    key={service.id}
                     data-aos="zoom-in"
                     data-aos-duration="300"
                     className="rounded-2xl mb-5 bg-white relative shadow-xl  h-[200px] transition-transform hover:-translate-y-2 flex flex-col justify-between"

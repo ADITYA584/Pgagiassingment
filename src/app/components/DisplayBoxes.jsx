@@ -1,10 +1,10 @@
 import GlassEffect from "./Glasseffect";
 
-const DisplayBoxes = ({ index, head, text, id }) => {
+const DisplayBoxes = ({ index, head, text, key }) => {
   return (
     <GlassEffect>
       <div
-        key={id}
+        key={key}
         className=" relative flex flex-col justify-center  w-full   h-[420px]"
       >
         <span

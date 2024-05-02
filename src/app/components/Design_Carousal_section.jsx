@@ -39,7 +39,7 @@ const Design = (props) => {
       <div className="flex flex-col items-center justify-center ">
         <div className="w-full lg:w-2/5">
           <h1 className="text-3xl sm:text-5xl  font-extrabold text-center mb-20">
-            Whats's Trending
+            {"What's Trending"}
           </h1>
         </div>
       </div>
