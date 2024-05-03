@@ -74,7 +74,7 @@ export default function HeroSection() {
             {" "}
             Start your AI journey with us
           </div>
-          <div className="font-extrabold self-center text-xl md:text-xl lg:text-2xl xl:text-4xl leading-normal mb-8 ">
+          <div className="font-extrabold self-center  sm:text-xl lg:text-2xl xl:text-4xl leading-normal mb-8 ">
             Your Go-To AI Consultancy for
             <div className=" text-center md:pt-1 lg:pt-5">
               {" "}
@@ -102,12 +102,12 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="w-full flex sm:flex sm:justify-evenly xs:flex xs:justify-evenly  sm-gap-4  xs:text-[16px]  md:flex-row  py-1 px-6 md:justify-center  items-center mt-0 lg:gap-6 md:gap-6">
+          <div className="w-full flex sm:flex sm:justify-evenly xs:flex xs:justify-evenly  sm-gap-4  xs:text-[16px]  md:flex-row  md:py-1 md:px-6 md:justify-center  items-center mt-0 lg:gap-6 md:gap-6">
             <div className="md:w-auto ">
               <Calendlylink />
             </div>
             <button className="  border border-primary text-[0.8rem] sm:text-lg font-bold p-1 sm:py-2 sm:px-2 rounded-lg  items-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl cursor-pointer">
-              <p className=" w-[10rem]">See case studies</p>
+              <p className=" sm:w-[10rem]">See case studies</p>
             </button>
           </div>
         </div>

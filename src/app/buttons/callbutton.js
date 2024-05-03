@@ -14,7 +14,7 @@ const Calendlylink = () => {
 
     return (
       <div className="App" id="root">
-        <div className="bg-primary border-2 text-[0.6rem] sm:text-lg border-[#3237C0] text-white font-bold px-2  py-2   rounded-lg inline-flex items-center gap-3 shadow-lg transition duration-300 ease-in-out transform hover:bg-[#3237C0] cursor-pointer">
+        <div className="bg-primary border-2 text-[0.6rem] sm:text-lg border-[#3237C0] text-white font-bold px-1  py-1 sm:p-2   rounded-lg inline-flex items-center gap-3 shadow-lg transition duration-300 ease-in-out transform hover:bg-[#3237C0] cursor-pointer">
           {rootElement && (
             <PopupButton
               url={url}

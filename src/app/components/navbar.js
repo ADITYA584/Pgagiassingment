@@ -38,7 +38,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed  bg-gradient-to-r from-[#160C30]   to-[#000000] top-0 w-full  z-10 ">
+    <div className="fixed text-[0.7rem] sm:text-lg bg-gradient-to-r from-[#160C30]   to-[#000000] top-0 w-full  z-10 ">
       {/* Thin horizontal blue line */}
       <div
         style={{
@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className=" h- flex justify-evenly md:px-8 lg:px-12 xl:px-24 ">
+      <div className="  flex justify-evenly md:px-8 lg:px-12 xl:px-24 ">
         {/* Logo */}
         <div className="flex flex-col items-center justify-center xl:pl-16 md:pl-10">
           <div className="flex-shrink-0  ">
@@ -75,10 +75,10 @@ export default function Navbar() {
               height={60}
             />
           </div>
-          <div className="text-sm  text-primary_text">PG-AGI</div>
+          <div className="text-[0.6]  text-primary_text">PG-AGI</div>
         </div>
         {/* Navbar links */}
-        <div className="header-links contents text-sm  sm:text-base text-primary_text ">
+        <div className="header-links contents text-[0.6rem]  sm:text-lg text-primary_text ">
           <ul className="flex items-center ml-4  lg:ml-5 xl:ml-2 lg:mr-8">
             <li className="p-2.5 xl:p-6">
               <button
