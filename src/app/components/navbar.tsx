@@ -11,7 +11,7 @@ export default function Navbar() {
   const [showAboutUs, setShowAboutUs] = useState(false);
   const [Showwhatwedo, setShowwhatwedo] = useState(false);
   const [Showwhoweare, setShowwhoweare] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("");
 
   const toggleAboutUs = () => {
     if (!showAboutUs) {
@@ -82,7 +82,7 @@ export default function Navbar() {
           <ul className="flex items-center ml-4  lg:ml-5 xl:ml-2 lg:mr-8">
             <li className="p-2.5 xl:p-6">
               <button
-                onMouseEnter={() => togglewhatwedo("whatwedo")}
+                onMouseEnter={() => togglewhatwedo()}
                 className="focus:outline-none flex items-center"
               >
                 <span className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#000AFF] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
@@ -92,7 +92,7 @@ export default function Navbar() {
             </li>
             <li className="p-2.5 xl:p-6">
               <button
-                onMouseEnter={() => toggleAboutUs("About Us")}
+                onMouseEnter={() => toggleAboutUs()}
                 className="focus:outline-none flex items-center"
               >
                 <span className="relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#000AFF] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
@@ -102,7 +102,7 @@ export default function Navbar() {
             </li>
             <li className="p-2.5 xl:p-6">
               <button
-                onMouseEnter={() => toggleWhoweare("whoweare")}
+                onMouseEnter={() => toggleWhoweare()}
                 onClick={toggleWhoweare}
                 className="focus:outline-none flex items-center"
               >
@@ -157,7 +157,7 @@ export default function Navbar() {
                     borderRadius: "8px",
                   }}
                   onMouseEnter={() =>
-                    toggleAboutUs("Our core principles and beliefs")
+                    toggleAboutUs()
                   }
                 >
                   <div className="h-full flex-grow">

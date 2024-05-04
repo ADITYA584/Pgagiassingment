@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-const Mobilenavbar = ({ closeNavbar }) => {
+const Mobilenavbar = (props: { closeNavbar: React.MouseEventHandler<HTMLButtonElement> | undefined; }) => {
     return (
         <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-[#14213D] text-white z-50">
             <div className="bg-#14213D text-white mt-8 ml-10">
@@ -31,7 +31,7 @@ const Mobilenavbar = ({ closeNavbar }) => {
 </div>
 <button
     className="absolute right-0 top-0 bg-transparent p-7 rounded-lg focus:outline-none"
-    onClick={closeNavbar}
+    onClick={props.closeNavbar}
   >
     <Image src="/images/x-button.png" alt="Close Navbar" width={15} height={15} />
   </button>

@@ -4,15 +4,15 @@ import Image from "next/image";
 import Calousal_card from "./Calousal_card";
 import ServicesData from "./Servicedata";
 
-const Design = (props) => {
+const Design = (_props: any) => {
   const scrollLeft = () => {
     const container = document.querySelector(".carousal");
-    container.scrollBy({
+    container?.scrollBy({
       left: -294, // Adjust scroll distance based on card width
       behavior: "smooth",
     });
     // Check if scroll reached the beginning, then scroll to the end
-    if (container.scrollLeft === 0) {
+    if (container?.scrollLeft === 0) {
       container.scrollBy({
         left: container.scrollWidth, // Scroll to the end
         behavior: "smooth",
@@ -21,14 +21,14 @@ const Design = (props) => {
   };
   const scrollRight = () => {
     const container = document.querySelector(".carousal");
-    container.scrollBy({
+    container?.scrollBy({
       left: 294, // Adjust scroll distance as needed
       behavior: "smooth",
     });
     // Check if scroll reached the end, then scroll to the beginning
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-      container.scrollBy({
-        left: -container.scrollWidth, // Scroll to the beginning
+    if (container!.scrollLeft + container!.clientWidth >= container!.scrollWidth) {
+      container!.scrollBy({
+        left: -container!.scrollWidth, // Scroll to the beginning
         behavior: "smooth",
       });
     }
@@ -44,7 +44,7 @@ const Design = (props) => {
         </div>
       </div>
       <div
-        style={{ "-ms-overflow-style": "none", "scrollbar-width": "none" }}
+        style={{ "msOverflowStyle": "none", "scrollbarWidth": "none" }}
         className=" w-[86%] m-auto sm:m-auto p-4 overflow-scroll carousal "
       >
         <div className="flex gap-8">
