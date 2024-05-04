@@ -1,4 +1,4 @@
-import Design from "./components/Design_Carousal_section";
+
 
 const Designbox_data = [
   {
