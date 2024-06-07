@@ -61,7 +61,7 @@ import React, { useState } from "react";
 // };
 
 export default function HeroSection() {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  
 
   return (
     <div className=" text-primary_text h-[100vh]  max-w-screen-xl mx-auto px-4  ">
@@ -114,9 +114,7 @@ export default function HeroSection() {
       </div>
 
       {/* Mobile Navbar */}
-      {isNavbarOpen && (
-        <Mobilenavbar closeNavbar={() => setIsNavbarOpen(false)} />
-      )}
+      
     </div>
   );
 }
