@@ -17,40 +17,40 @@ export default function Page() {
   
 
   const segmentRef = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const scroll = window.scrollY;
-      if (!segmentRef.current) return;
-      const rectSegment = segmentRef.current?.getBoundingClientRect();
-      const offset = Math.round(rectSegment.top + scroll);
-      const blob = document.querySelector(`.${Classes.blob}`) as HTMLDivElement;
-      if (!blob) return;
-      const scrollY = (scroll - offset) / window.innerHeight;
-      const percent = (scrollY - Math.floor(scrollY)) * 100;
-      let pos;
+    useEffect(() => {
+      window.addEventListener("scroll", () => {
+        const scroll = window.scrollY;
+        if (!segmentRef.current) return;
+        const rectSegment = segmentRef.current?.getBoundingClientRect();
+        const offset = Math.round(rectSegment.top + scroll);
+        const blob = document.querySelector(`.${Classes.blob}`) as HTMLDivElement;
+        if (!blob) return;
+        const scrollY = (scroll - offset) / window.innerHeight;
+        const percent = (scrollY - Math.floor(scrollY)) * 100;
+        let pos;
 
-      if (scroll >= offset && scroll <= offset + window.innerHeight * 5) {
-        if (scrollY <= 1) pos = 50 - percent / 2;
-        else if (Math.floor(scrollY % 2) === 0) pos = 100 - percent;
-        else pos = percent;
-        blob.style.top = "50%";
-        blob.style.left = `${pos}%`;
-      }
-      if (
-        scroll >= offset + window.innerHeight * 5 &&
-        scroll <= offset + window.innerHeight * 6
-      ) {
-        pos = percent;
-        if (percent > 80) blob.style.top = `${50 + (percent - 80)}%`;
-        else blob.style.top = "50%";
-        blob.style.left = `${pos}%`;
-      }
-    });
-  }, []);
+        if (scroll >= offset && scroll <= offset + window.innerHeight * 5) {
+          if (scrollY <= 1) pos = 50 - percent / 2;
+          else if (Math.floor(scrollY % 2) === 0) pos = 100 - percent;
+          else pos = percent;
+          blob.style.top = "50%";
+          blob.style.left = `${pos}%`;
+        }
+        if (
+          scroll >= offset + window.innerHeight * 5 &&
+          scroll <= offset + window.innerHeight * 6
+        ) {
+          pos = percent;
+          if (percent > 80) blob.style.top = `${50 + (percent - 80)}%`;
+          else blob.style.top = "50%";
+          blob.style.left = `${pos}%`;
+        }
+      });
+    }, []);
 
   return (
     <div className={Classes.main} >
-      <div className="min-h-screen">
+      <div className="">
         <HeroSection />
       </div>
       <PartnerCompanies />

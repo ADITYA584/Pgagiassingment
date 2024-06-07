@@ -66,17 +66,17 @@ export default function HeroSection() {
   return (
     <div className=" text-primary_text h-[100vh]  max-w-screen-xl mx-auto px-4  ">
       {/* Heading and Navbar button */}
-
+  
       <div className="flex items-center justify-center   h-[100%]  w-full md:flex-col  space-x-2 text-primary_text">
-        <div className="flex flex-col w-full  justify-center   mt-5 md:w-[55%] md:ml-8 lg:ml-12 xl:ml-16">
+        <div className="flex flex-col w-full gap-3 justify-center  md:w-[55%] md:ml-8 lg:ml-12 xl:ml-16">
           {/* Content */}
-          <div className="  bg-gradient-to-r from-[#6a6eec] to-[#FFFFFF] text-transparent bg-clip-text font-bold text-center text-sm md:text-md leading-normal md:mb-2 mt-2">
+          <div className="  bg-gradient-to-r from-[#6a6eec] to-[#FFFFFF] text-transparent bg-clip-text font-bold text-center text-xl md:text-md leading-normal md:mb-2 mt-2">
             {" "}
             Start your AI journey with us
           </div>
-          <div className="font-extrabold self-center  sm:text-xl lg:text-2xl xl:text-4xl leading-normal mb-8 ">
+          <div className="font-extrabold self-center  text-[1.15rem] lg:text-2xl xl:text-4xl leading-normal mb-8 ">
             Your Go-To AI Consultancy for
-            <div className=" text-center md:pt-1 lg:pt-5">
+            <div className=" text-center mt-3 text-4xl md:pt-1 lg:pt-5">
               {" "}
               <TypeAnimation
                 sequence={[
@@ -102,12 +102,12 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="w-full flex sm:flex sm:justify-evenly xs:flex xs:justify-evenly  sm-gap-4  xs:text-[16px]  md:flex-row  md:py-1 md:px-6 md:justify-center  items-center mt-0 lg:gap-6 md:gap-6">
-            <div className="md:w-auto ">
-              <Calendlylink />
+          <div className="w-full  flex sm:justify-evenly  gap-4  xs:text-[16px]  md:flex-row  md:py-1 md:px-6 md:justify-center  items-center mt-0 lg:gap-6 md:gap-6">
+            <div className=" py-4 flex items-center justify-center w-[50%]">
+              <Calendlylink/>
             </div>
-            <button className="  border border-primary text-[0.8rem] sm:text-lg font-bold p-1 sm:py-2 sm:px-2 rounded-lg  items-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl cursor-pointer">
-              <p className=" sm:w-[10rem]">See case studies</p>
+            <button className=" w-[50%] border border-primary text-[0.8rem] sm:text-[1.1rem] font-bold p-1 sm:py-2 sm:px-2 rounded-lg  items-center  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+              <p className=" p-[0.2rem] ">See case studies</p>
             </button>
           </div>
         </div>

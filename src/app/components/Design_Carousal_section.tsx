@@ -38,7 +38,7 @@ const Design = (_props: any) => {
     <div className=" text-primary_text  ">
       <div className="flex flex-col items-center justify-center ">
         <div className="w-full lg:w-2/5">
-          <h1 className="text-3xl sm:text-5xl  font-extrabold text-center mb-20">
+          <h1 className="text-3xl sm:text-5xl  font-extrabold text-center mb-10 sm:mb-20">
             {"What's Trending"}
           </h1>
         </div>
@@ -47,14 +47,14 @@ const Design = (_props: any) => {
         style={{ "msOverflowStyle": "none", "scrollbarWidth": "none" }}
         className=" w-[86%] m-auto sm:m-auto p-4 overflow-scroll carousal "
       >
-        <div className="flex gap-8">
+        <div className="flex gap-6">
           {" "}
           {ServicesData.map((item, index) => (
             <Calousal_card key={index} service={item} />
           ))}
         </div>
       </div>
-      <div className="controls flex justify-center mt-5 gap-2">
+      <div className="controls flex justify-center mt-5 gap-8">
         <button
           onClick={scrollLeft}
           className=" border-2 border-blue-600 hover:bg-blue-600 text-white font-bold py-2 px-4 duration-300 rounded-full"

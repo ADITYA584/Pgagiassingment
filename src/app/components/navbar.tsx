@@ -6,12 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Hoverwhatwedo from "./OnhoverComponents/Hoverwhatwedo";
 import Hoverwhoweare from "./OnhoverComponents/Hoverwhoweare";
+import Mobilenavbar from "./mobilenavbar";
+import MenuIcon from "@mui/icons-material/Menu"
 
 export default function Navbar() {
   const [showAboutUs, setShowAboutUs] = useState(false);
   const [Showwhatwedo, setShowwhatwedo] = useState(false);
   const [Showwhoweare, setShowwhoweare] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const [isNavbarOpen,setIsNavbarOpen] = useState(false)
 
   const toggleAboutUs = () => {
     if (!showAboutUs) {
@@ -36,6 +39,10 @@ export default function Navbar() {
     setShowwhatwedo(false); // Close Solutions section
     setSelectedOption("whoweare");
   };
+
+  const menuHandler = () => {
+    setIsNavbarOpen(prev=>!prev)
+  }
 
   return (
     <div className="fixed text-[0.7rem] sm:text-lg bg-gradient-to-r from-[#160C30]   to-[#000000] top-0 w-full  z-10 ">
@@ -62,11 +69,35 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+      <div>
+      <div className=" sm:hidden flex  items-center justify-between px-10 ">
+          <div className=" block w-[20]  ">
+            <Image
+              src="/images/pgagi_logo.png"
+              alt="Company logo"
+              className=" w-[55px] h-[55px] object-contain"
+              width={30}
+              height={30}
+            />
+          <p className=" text-[0.5rem] xs:text-sm  text-primary_text">PG-AGI</p>
+          </div>
+          <div className="">
+            <button onClick={menuHandler }>
+            <MenuIcon
+            className="text-white text-4xl"/>
+            </button>
+          </div>
+        </div>
+        
+      </div>
+      {isNavbarOpen && <Mobilenavbar
+        MenuHandler={menuHandler}
+      />}
 
-      <div className="  flex justify-evenly md:px-8 lg:px-12 xl:px-24 ">
+      <div className=" hidden sm:flex justify-around px-3 md:px-8 lg:px-12 xl:px-24 ">
         {/* Logo */}
-        <div className="flex flex-col items-center justify-center xl:pl-16 md:pl-10">
-          <div className="flex-shrink-0  ">
+        <div className="  flex flex-col items-center justify-center xl:pl-16 md:pl-10">
+          <div className="hidden sm:block flex-shrink-0 w-[30]  ">
             <Image
               src="/images/pgagi_logo.png"
               alt="Company logo"
@@ -75,14 +106,15 @@ export default function Navbar() {
               height={60}
             />
           </div>
-          <div className="text-[0.6]  text-primary_text">PG-AGI</div>
+          <p className=" text-[0.5rem] xs:text-sm  text-primary_text">PG-AGI</p>
         </div>
         {/* Navbar links */}
-        <div className="header-links contents text-[0.6rem]  sm:text-lg text-primary_text ">
-          <ul className="flex items-center ml-4  lg:ml-5 xl:ml-2 lg:mr-8">
-            <li className="p-2.5 xl:p-6">
+        <div className="header-links contents text-[0.55rem] xs:text-[0.9 rem] sm:text-base text-primary_text ">
+          <ul className="flex gap-2 items-center xs:ml-4  lg:ml-5 xl:ml-2 lg:mr-8">
+            <li className="p-1 sm:p-2.5 xl:p-6">
               <button
                 onMouseEnter={() => togglewhatwedo()}
+                onClick={toggleWhoweare}
                 className="focus:outline-none flex items-center"
               >
                 <span className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#000AFF] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
@@ -90,7 +122,7 @@ export default function Navbar() {
                 </span>
               </button>
             </li>
-            <li className="p-2.5 xl:p-6">
+            <li className="p-1sm:p-2.5 xl:p-6">
               <button
                 onMouseEnter={() => toggleAboutUs()}
                 className="focus:outline-none flex items-center"
@@ -100,7 +132,7 @@ export default function Navbar() {
                 </span>
               </button>
             </li>
-            <li className="p-2.5 xl:p-6">
+            <li className="p-1 sm:p-2.5 xl:p-6">
               <button
                 onMouseEnter={() => toggleWhoweare()}
                 onClick={toggleWhoweare}

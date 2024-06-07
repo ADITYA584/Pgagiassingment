@@ -10,9 +10,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const Footer = () => {
   return (
     <>
-      <footer className="relative  text-primary_text pt-8 pb-6 bg-[#FFFFFF1A] w-full md:text-center ">
+      <footer className="relative  text-primary_text pt-4 pb-3 xs:pt-8 xs:pb-6 bg-[#FFFFFF1A] w-full md:text-center ">
         <div className="container mx-auto px-4 hidden sm:block">
-          <div className="flex  justify-around text-left lg:text-left">
+          <div className="flex justify-around text-left lg:text-left">
             <div className="px-4">
               <div className="flex mb-10 flex-col  ">
                 <Image
@@ -140,46 +140,46 @@ const Footer = () => {
         </div>
 
         {/* smaller */}
-        <div className="container mx-auto px-4 sm:hidden text-center">
+        <div className="container mx-auto sm:hidden text-center">
           <div className="flex flex-col items-center">
-            <div className="mb-4 flex justify-center items-center">
+            <div className="mb-2 gap-1 flex justify-center items-center">
               <Image
                 src="/images/pgagi.png"
                 alt="Company logo"
-                className="h-12 object-contain"
-                width={50}
-                height={50}
+                className=" object-contain"
+                width={40}
+                height={40}
               />
-              <h4 className="text-3xl font-extrabold  whitespace-nowrap">
+              <h4 className="text-lg font-extrabold  whitespace-nowrap">
                 PG-AGI
               </h4>
             </div>
-            <h5 className="text-md mb-5  whitespace-nowrap">
+            <h5 className="text-sm mb-3  whitespace-nowrap">
               Find us on any of these platforms
             </h5>
             {/* Social icons */}
-            <div className="mb-6 flex justify-center items-center">
+            <div className="mb-4 flex justify-center items-center">
               <a
                 href="https://twitter.com/PGAGI123"
-                className=" flex h-10 w-10 items-center justify-center rounded-full border border-stroke  hover:border-primary hover:bg-primary hover:text-white mr-4 lg:mr-3 xl:mr-4"
+                className=" flex h-8 w-8 items-center justify-center rounded-full border border-stroke  hover:border-primary hover:bg-primary hover:text-white mr-4"
               >
                 <TwitterIcon />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCKySzInhClSvewLucjmQmhQ"
-                className="mr-3 flex h-10 w-10 items-center justify-center rounded-full border border-stroke hover:border-primary hover:bg-primary hover:text-white  sm:mr-4 lg:mr-3 xl:mr-4"
+                className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke hover:border-primary hover:bg-primary hover:text-white  "
               >
                 <YouTubeIcon />
               </a>
               <a
                 href="https://www.linkedin.com/company/pg-agi/"
-                className="mr-3 flex h-10 w-10 items-center justify-center rounded-full border border-stroke hover:border-primary hover:bg-primary hover:text-white  sm:mr-4 lg:mr-3 xl:mr-4"
+                className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke hover:border-primary hover:bg-primary hover:text-white  "
               >
                 <LinkedInIcon />
               </a>
               <a
                 href=""
-                className="mr-3 flex h-10 w-10 items-center justify-center rounded-full border border-stroke hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
+                className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke hover:border-primary hover:bg-primary hover:text-white "
               >
                 <InstagramIcon />
               </a>
@@ -189,45 +189,45 @@ const Footer = () => {
               {/* LinkedIn icon */}
               {/* Instagram icon */}
             </div>
-            <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 whitespace-nowrap">
+            <span className="block uppercase text-blueGray-500 text-[0.7rem] mb-2 font-semibold whitespace-nowrap">
               Useful Links
             </span>
-            <ul className="list-unstyled">
+            <ul className=" flex flex-col list-unstyled">
               <li>
                 <Link
                   href="/aboutus"
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap"
+                  className="text-blueGray-600 hover:text-blueGray-800 block pb-1 text-[0.6rem] whitespace-nowrap"
                 >
                   About Us
                 </Link>
               </li>
               <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap">
+                <a className="text-blueGray-600 hover:text-blueGray-800  block pb-1 text-[0.6rem] whitespace-nowrap">
                   Blog
                 </a>
               </li>
               <li>
                 <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap"
+                  className="text-blueGray-600 hover:text-blueGray-800 block pb-1 text-[0.6rem] whitespace-nowrap"
                   href="https://github.com/PG-AGI"
                 >
                   Github
                 </a>
               </li>
               <li>
-                <a className="text-primary_white hover:text-blueGray-800 font-semibold block pb-2 text-sm whitespace-nowrap">
+                <a className="text-primary_white hover:text-blueGray-800 block pb-1 text-[0.6rem] whitespace-nowrap">
                   Free Products
                 </a>
               </li>
             </ul>
             {/* Useful Links */}
-            <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 whitespace-nowrap">
+            <span className="block uppercase text-blueGray-500 text-[0.6rem] mb-1 whitespace-nowrap">
               Other Resources
             </span>
             {/* Other Resources */}
           </div>
-          <hr className="my-6 border-blueGray-300" />
-          <div className="flex justify-center items-center  text-sm text-blueGray-500 font-semibold py-1 whitespace-nowrap">
+          <hr className="my-3 border-blueGray-300" />
+          <div className="flex justify-center items-center  text-[0.6rem] text-blueGray-500 py-1 whitespace-nowrap">
             Copyright © <span id="get-current-year">2024</span>
             <a
               href="https://www.creative-tim.com/product/notus-js"

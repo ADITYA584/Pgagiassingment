@@ -78,7 +78,7 @@ module.exports = {
       },
       screens: {
         // Custom breakpoints with names
-        xs: "0px", // Extra Small - Custom, not a default Tailwind breakpoint
+        xs: "320px", // Extra Small - Custom, not a default Tailwind breakpoint
         sm: "576px", // Small devices (landscape phones, 576px and up)
         md: "768px", // Medium devices (tablets, 768px and up)
         lg: "992px", // Large devices (desktops, 992px and up)
